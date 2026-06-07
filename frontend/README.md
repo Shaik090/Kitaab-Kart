@@ -1,36 +1,173 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 KitaabKart
 
-## Getting Started
+**Read More, Spend Less**
 
-First, run the development server:
+KitaabKart is a modern online marketplace for buying and selling used books. The platform helps students and readers find affordable books while giving sellers an easy way to earn money from books they no longer need.
+
+---
+
+## 🚀 Features
+
+### 👤 User Features
+
+- User Registration & Authentication
+- Browse Books by Category
+- Search Books by Title, Author, or Genre
+- View Book Details
+- Add Books to Cart
+- Wishlist Management
+- Secure Checkout
+- Order Tracking
+- User Profile Management
+
+### 📖 Seller Features
+
+- List Used Books for Sale
+- Manage Inventory
+- Update Book Information
+- Track Selling Orders
+- Manage Product Availability
+
+### 🛠️ Admin Features
+
+- User Management
+- Product Management
+- Order Monitoring
+- Inventory Control
+- Platform Analytics
+
+---
+
+## 🏗️ Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+KitaabKart/
+│
+├── frontend/       # Next.js Frontend
+├── backend/        # Node.js Backend API
+├── README.md
+└── .gitignore
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💻 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend
 
-## Learn More
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- ShadCN UI
+- Lucide React
 
-To learn more about Next.js, take a look at the following resources:
+### Backend
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Database
 
-## Deploy on Vercel
+- MongoDB Atlas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Vercel (Frontend)
+- Render / Railway (Backend)
+
+---
+
+## 📦 Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Shaik090/KitaabKart.git
+```
+
+```bash
+cd KitaabKart
+```
+
+### Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Backend Setup
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in the backend directory.
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+PORT=5000
+```
+
+---
+
+## 🎯 Future Enhancements
+
+- Online Payments
+- Book Recommendations
+- AI-powered Search
+- Book Exchange System
+- Seller Ratings & Reviews
+- Notification System
+- Mobile Application
+
+---
+
+## 📸 Screenshots
+
+Add screenshots of:
+
+- Home Page
+- Book Listing Page
+- Product Details Page
+- Cart Page
+- User Dashboard
+- Seller Dashboard
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit changes
+4. Push to your branch
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Developer
+
+**Shaik Mohammed Nowman**
+
+Built with ❤️ using Next.js, TypeScript, Tailwind CSS, Node.js, Express.js, and MongoDB.
