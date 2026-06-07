@@ -77,7 +77,7 @@ KitaabKart/
 ### Deployment
 
 - Vercel (Frontend)
-- Render / Railway (Backend)
+- Render
 
 ---
 
@@ -131,20 +131,6 @@ PORT=5000
 - Book Exchange System
 - Seller Ratings & Reviews
 - Notification System
-- Mobile Application
-
----
-
-## 📸 Screenshots
-
-Add screenshots of:
-
-- Home Page
-- Book Listing Page
-- Product Details Page
-- Cart Page
-- User Dashboard
-- Seller Dashboard
 
 ---
 
@@ -160,14 +146,8 @@ Contributions are welcome.
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
 ## 👨‍💻 Developer
 
-**Shaik Mohammed Nowman**
+**Shaik Mohammad Nowman**
 
 Built with ❤️ using Next.js, TypeScript, Tailwind CSS, Node.js, Express.js, and MongoDB.
