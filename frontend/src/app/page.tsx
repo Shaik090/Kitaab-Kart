@@ -78,7 +78,7 @@ export default function Home() {
       title: 'Get paid into your UPI/Bank account',
       description:
         'You will get money into your account once you receive an order for your book.',
-      icon: <Wallet className="h-8 w-8 text-primary" />,
+      icon: <CreditCard className="h-8 w-8 text-primary" />,
     },
   ];
 
@@ -147,7 +147,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-6">
             <Button
               size="lg"
-              className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 backdrop-blur-md border border-cyan-300/30 transition-all duration-300 hover:bg-cyan-400/20 hover:shadow-lg hover:shadow-cyan-400/30 hover:-translate-y-1 text-white px-8 py-6 rounded-xl"
+              className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 backdrop-blur-md border border-cyan-300/30 transition-all duration-300 ease-out hover:bg-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/50 hover:-translate-y-1 text-white px-8 py-6 rounded-xl"
             >
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 p-2 rounded-lg group-hover:bg-white/30 transition-colors">
@@ -162,7 +162,7 @@ export default function Home() {
             </Button>
             <Button
               size="lg"
-              className="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 backdrop-blur-md border border-cyan-300/30 transition-all duration-300 hover:bg-cyan-400/20 hover:shadow-lg hover:shadow-cyan-400/30 hover:-translate-y-1 text-white px-8 py-6 rounded-xl"
+              className="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 backdrop-blur-md border border-cyan-300/30 transition-all duration-300 ease-out hover:bg-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/50 hover:-translate-y-1 text-white px-8 py-6 rounded-xl"
             >
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 p-2 rounded-lg group-hover:bg-white/30 transition-colors">
@@ -181,14 +181,14 @@ export default function Home() {
       <NewBooks />
       <Button
         size="lg"
-        className="flex mt-10 mb-10 mx-auto bg-indigo-600 hover:bg-indigo-700 backdrop-blur-xl border border-white/20 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl hover:shadow-cyan-500/20 px-8 py-6 rounded-xl"
+        className="flex mt-10 mb-10 mx-auto bg-emerald-500 hover:bg-emerald-600 backdrop-blur-xl border border-white/20 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl hover:shadow-cyan-500/20 px-8 py-6 rounded-xl"
       >
         <Link href="/books">
           <div className="text-sm">Explore Books</div>
         </Link>
       </Button>
       {/* Selling Instructions Section */}
-      <section className="py-16 bg-white/20">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-4">
             <h2 className="text-3xl font-bold mb-4">
@@ -202,11 +202,11 @@ export default function Home() {
             <div className="hidden md:block absolute top-1/2 left-1/4 right-1/4 h-0.5 border-t-2 border-dashed border-gray-300 -z-10" />
             {sellSteps.map((step, index) => (
               <div key={index} className="relative flex flex-col h-full">
-                <div className="bg-white/20 backdrop-blur-xl rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 text-center ease-out flex-grow flex flex-col hover:-translate-y-3 hover:bg-white/30 hover:shadow-cyan-200/10 hover:scale-[1.02]">
-                  <div className="absolute top-2 left-14 -translate-x-1/2 bg-red-50 text-red-700 border border-red-100 px-4 py-1 rounded-full text-sm font-medium z-10">
+                <div className="bg-white/20 backdrop-blur-xl rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 text-center ease-out flex-grow flex flex-col hover:-translate-y-3 hover:border-red-500 hover:shadow-cyan-200/30 hover:scale-[1.02]">
+                  <div className="absolute top-2 left-14 -translate-x-1/2 bg-red-100 text-red-700 border border-red-100 px-4 py-1 rounded-full text-sm font-medium z-10">
                     {step.step}
                   </div>
-                  <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-16 mb-2 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
                     {step.icon}
                   </div>
                   <h3 className="font-semibold mb-2">{step.title}</h3>
@@ -221,6 +221,37 @@ export default function Home() {
       </section>
 
       {/* Buying Instructions Section */}
+      <section className="py-16 bg-gradient-to-b from-red-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <h2 className="text-3xl font-bold mb-4">
+              How to Buy Books on KitaabKart?
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Find your favorite books in just 3 simple steps.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 relative">
+            <div className="hidden md:block absolute top-1/2 left-1/4 right-1/4 h-0.5 border-t-2 border-dashed border-gray-300 -z-10" />
+            {buySteps.map((step, index) => (
+              <div key={index} className="relative flex flex-col h-full">
+                <div className="bg-white/20 backdrop-blur-xl rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 text-center ease-out flex-grow flex flex-col hover:-translate-y-3 hover:border-red-500 hover:shadow-cyan-200/30 hover:scale-[1.02]">
+                  <div className="absolute top-2 left-14 -translate-x-1/2 bg-red-500 text-white border border-indigo-100 px-4 py-1 rounded-full text-sm font-medium z-10">
+                    {step.step}
+                  </div>
+                  <div className="w-16 mb-2 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
+                    {step.icon}
+                  </div>
+                  <h3 className="font-semibold mb-2">{step.title}</h3>
+                  <p className="text-gray-600 text-sm flex-grow">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

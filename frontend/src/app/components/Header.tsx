@@ -268,7 +268,7 @@ const Header = () => {
           <Link href="/book-sell">
             <Button
               variant="secondary"
-              className="bg-white text-red-600 border-2 border-red-600 hover:bg-red-600 hover:text-white rounded-full"
+              className="bg-white text-red-600 border-2 border-red-600 hover:bg-red-600 hover:text-white rounded-full backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/50 hover:-translate-y-1"
             >
               Sell Used Books
             </Button>
