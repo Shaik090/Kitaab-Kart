@@ -268,7 +268,7 @@ const Header = () => {
           <Link href="/book-sell">
             <Button
               variant="secondary"
-              className="bg-yellow-400 text-gray-800 hover:bg-yellow-500"
+              className="bg-white text-red-600 border-2 border-red-600 hover:bg-red-600 hover:text-white rounded-full"
             >
               Sell Used Books
             </Button>
@@ -342,12 +342,12 @@ const Header = () => {
         </Sheet>
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/logo.png"
+            src="/images/weblogo.png"
             alt="Kitaab Kart Logo"
             loading="eager"
             width={250}
             height={70}
-            className="h-7 md:h-10 w-25 md:w-auto"
+            className="h-9 md:h-10 w-30 md:w-auto"
           />
         </Link>
         <div className="flex flex-1 justify-center max-w-xl px-4">

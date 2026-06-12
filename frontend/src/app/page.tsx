@@ -4,9 +4,9 @@ import {
   BookOpen,
   Camera,
   CreditCard,
+  HandCoins,
   Library,
   Search,
-  ShoppingBag,
   Store,
   Tag,
   Truck,
@@ -16,6 +16,7 @@ import { Pacifico } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import NewBooks from './components/NewBooks';
 
 const pacifico = Pacifico({
   subsets: ['latin'],
@@ -25,11 +26,9 @@ const pacifico = Pacifico({
 export default function Home() {
   const bannerImages = [
     '/images/Book1.jpg',
-    '/images/Book2.jfif',
-    '/images/Book3.jfif',
-    '/images/Book4.jfif',
-    '/images/Book5.jpg',
-    '/images/Book6.png',
+    '/images/Book2.jpg',
+    '/images/Book3.png',
+    '/images/Book4.png',
   ];
 
   const blogPosts = [
@@ -143,15 +142,16 @@ export default function Home() {
             Read More Spend Less
           </p>
           {/* Red Brush underline */}
-          <div className="mt-2 w-72 md:w-96 h-[6px] rounded-full bg-gradient-to-r from-red-700 via-red-500 to-red-400 shadow-[0_0_15px_rgba(255,0,0,0.6)]" />
+          <div className="mt-2 w-72 md:w-96 h-[6px] rounded-full bg-gradient-to-r from-red-700 via-red-500 to-red-400 shadow-[0_0_15px_rgba(255,0,0,0.6)]" />{' '}
+          <br />
           <div className="flex flex-col sm:flex-row gap-6">
             <Button
               size="lg"
-              className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-6 rounded-xl"
+              className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 backdrop-blur-md border border-cyan-300/30 transition-all duration-300 hover:bg-cyan-400/20 hover:shadow-lg hover:shadow-cyan-400/30 hover:-translate-y-1 text-white px-8 py-6 rounded-xl"
             >
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 p-2 rounded-lg group-hover:bg-white/30 transition-colors">
-                  <ShoppingBag className="h-6 w-6" />
+                  <BookOpen className="h-6 w-6" />
                 </div>
                 <Link href="/books">
                   <div className="text-left">
@@ -162,13 +162,13 @@ export default function Home() {
             </Button>
             <Button
               size="lg"
-              className="group bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white px-8 py-6 rounded-xl"
+              className="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 backdrop-blur-md border border-cyan-300/30 transition-all duration-300 hover:bg-cyan-400/20 hover:shadow-lg hover:shadow-cyan-400/30 hover:-translate-y-1 text-white px-8 py-6 rounded-xl"
             >
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 p-2 rounded-lg group-hover:bg-white/30 transition-colors">
-                  <Store className="h-6 w-6" />
+                  <HandCoins className="h-6 w-6" />
                 </div>
-                <Link href="/books">
+                <Link href="/book-sell">
                   <div className="text-left">
                     <div className="text-sm opacity-90">Sell Now</div>
                   </div>
@@ -178,6 +178,49 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <NewBooks />
+      <Button
+        size="lg"
+        className="flex mt-10 mb-10 mx-auto bg-indigo-600 hover:bg-indigo-700 backdrop-blur-xl border border-white/20 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl hover:shadow-cyan-500/20 px-8 py-6 rounded-xl"
+      >
+        <Link href="/books">
+          <div className="text-sm">Explore Books</div>
+        </Link>
+      </Button>
+      {/* Selling Instructions Section */}
+      <section className="py-16 bg-white/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <h2 className="text-3xl font-bold mb-4">
+              How to Sell Your Books on KitaabKart?
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Earn money from your old books in just 3 simple steps.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 relative">
+            <div className="hidden md:block absolute top-1/2 left-1/4 right-1/4 h-0.5 border-t-2 border-dashed border-gray-300 -z-10" />
+            {sellSteps.map((step, index) => (
+              <div key={index} className="relative flex flex-col h-full">
+                <div className="bg-white/20 backdrop-blur-xl rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 text-center ease-out flex-grow flex flex-col hover:-translate-y-3 hover:bg-white/30 hover:shadow-cyan-200/10 hover:scale-[1.02]">
+                  <div className="absolute top-2 left-14 -translate-x-1/2 bg-red-50 text-red-700 border border-red-100 px-4 py-1 rounded-full text-sm font-medium z-10">
+                    {step.step}
+                  </div>
+                  <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
+                    {step.icon}
+                  </div>
+                  <h3 className="font-semibold mb-2">{step.title}</h3>
+                  <p className="text-gray-600 text-sm flex-grow">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Buying Instructions Section */}
     </main>
   );
 }
